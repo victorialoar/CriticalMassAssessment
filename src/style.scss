@@ -1,0 +1,105 @@
+body {
+    background-color: #0AAEEA; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to top left, #0AAEEA, #B721FF);
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-wrapper,
+.thankyou-wrapper {
+    margin: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+
+    .headline {
+        background: black;
+        border-radius: 20px 20px 0 0;
+        color: white;
+        padding: 0 60px;
+
+        h2 {
+            padding: 20px 0;
+            margin: auto;
+        }
+    }
+
+    form,
+    .data-wrapper {
+        background: white;
+        border-radius: 0 0 20px 20px;
+        padding: 40px 60px 60px;
+        display: flex;
+        flex-flow: wrap;
+    
+        label {
+            display: block;
+            width: 50%;
+            float: left;
+            margin-bottom: 20px;
+    
+            input {
+                border: 0;
+                border-bottom: 2px solid black;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                display: block;
+                width: 90%;
+            }
+    
+            .error-message,
+            .invalid-message {
+                color: red;
+                font-style: italic;
+                display: none;
+                font-size: 12px;
+            }
+        }
+
+        .form-example-submit {
+            font-family: "Poppins", sans-serif;
+            font-size: 16px;
+            background: black;
+            color: white;
+            border: 0;
+            padding: 5px 10px;
+
+            &:hover {
+                background: #1c1c1c;
+            }
+        }
+    }
+}
+
+.thankyou-wrapper {
+    display: none;
+
+    .data-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .form-wrapper,
+    .thankyou-wrapper {
+        width: 80%;
+
+        .headline {
+            padding: 0 40px;
+        }
+
+        form {
+            padding: 20px 40px 40px;
+
+            label {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
